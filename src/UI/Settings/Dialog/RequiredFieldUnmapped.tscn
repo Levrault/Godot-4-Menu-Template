@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/UI/Settings/Dialog/RequiredFieldUnmapped.gd" type="Script" id=1]
+
+[node name="RequiredFieldUnmapped" type="Window"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.5
+offset_top = -59.0
+offset_right = 178.5
+offset_bottom = 59.0
+exclusive = true
+window_title = "rebind.required_field_title"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/offset_right = 10
+custom_constants/offset_top = 10
+custom_constants/offset_left = 10
+custom_constants/offset_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 347.0
+offset_bottom = 108.0
+custom_constants/separation = 12
+alignment = 1
+
+[node name="Message" type="Label" parent="MarginContainer/VBoxContainer"]
+offset_right = 337.0
+offset_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "ui_required_action_unmapped"
+align = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+offset_top = 78.0
+offset_right = 337.0
+offset_bottom = 98.0
+alignment = 1
+
+[node name="Ok" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+offset_left = 104.0
+offset_right = 233.0
+offset_bottom = 20.0
+text = "commons.ok"

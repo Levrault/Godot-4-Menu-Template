@@ -1,0 +1,266 @@
+; Project was converted by built-in tool to Godot 4.0
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Field",
+"class": "CheckboxField",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Fields/CheckboxField.gd"
+}, {
+"base": "FieldWithOptions",
+"class": "DropdownField",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Fields/DropDownField.gd"
+}, {
+"base": "HBoxContainer",
+"class": "Field",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Fields/Field.gd"
+}, {
+"base": "Control",
+"class": "FieldSet",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Fields/FieldSet.gd"
+}, {
+"base": "Field",
+"class": "FieldWithOptions",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Fields/FieldWithOptions.gd"
+}, {
+"base": "Node",
+"class": "Filter",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Filter/Filter.gd"
+}, {
+"base": "Node",
+"class": "Form",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Form/Form.gd"
+}, {
+"base": "TextureRect",
+"class": "GamepadData",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Gamepad/Data/GamepadData.gd"
+}, {
+"base": "HBoxContainer",
+"class": "GamepadMapField",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Gamepad/GamepadMapField.gd"
+}, {
+"base": "Button",
+"class": "GenericButton",
+"language": "GDScript",
+"path": "res://src/UI/Commons/Button/GenericButton.gd"
+}, {
+"base": "FieldWithOptions",
+"class": "HListField",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Fields/HListField.gd"
+}, {
+"base": "HBoxContainer",
+"class": "KeyMapField",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Keymap/KeyMapField.gd"
+}, {
+"base": "Button",
+"class": "NavigationButton",
+"language": "GDScript",
+"path": "res://src/UI/Commons/Navigation/NavigationButton.gd"
+}, {
+"base": "Control",
+"class": "NavigationRouter",
+"language": "GDScript",
+"path": "res://src/UI/Commons/Navigation/NavigationRouter.gd"
+}, {
+"base": "Control",
+"class": "NavigationSwitch",
+"language": "GDScript",
+"path": "res://src/UI/Commons/Navigation/NavigationSwitch.gd"
+}, {
+"base": "Form",
+"class": "RebindForm",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Form/BindindForm.gd"
+}, {
+"base": "Field",
+"class": "SliderField",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Fields/SliderField.gd"
+}, {
+"base": "Node",
+"class": "Updater",
+"language": "GDScript",
+"path": "res://src/UI/Settings/Updater/Updater.gd"
+} ]
+_global_script_class_icons={
+"CheckboxField": "res://assets/icons/check-square.svg",
+"DropdownField": "",
+"Field": "res://assets/icons/field.svg",
+"FieldSet": "res://assets/icons/fieldset.svg",
+"FieldWithOptions": "res://assets/icons/field.svg",
+"Filter": "",
+"Form": "res://assets/icons/form.svg",
+"GamepadData": "",
+"GamepadMapField": "res://assets/icons/gamepad.svg",
+"GenericButton": "",
+"HListField": "",
+"KeyMapField": "res://assets/icons/keyboard.svg",
+"NavigationButton": "res://assets/icons/navigation.svg",
+"NavigationRouter": "",
+"NavigationSwitch": "",
+"RebindForm": "",
+"SliderField": "res://assets/icons/percent.svg",
+"Updater": ""
+}
+
+[Gamepad]
+
+y_axis=0
+x_axis=0
+rumble_force=0.0
+
+[application]
+
+config/name="Godot-Menu-Template"
+run/main_scene="res://src/UI/MainMenu.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Events="*res://src/Autoload/Events.gd"
+EngineSettings="*res://src/Autoload/EngineSettings.gd"
+InputManager="*res://src/Autoload/InputManager.gd"
+Config="*res://src/Autoload/Config.gd"
+Menu="*res://src/Autoload/Menu.gd"
+
+[debug]
+
+gdscript/warnings/unused_argument=false
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
+
+[display]
+
+window/size/width=480
+window/size/height=270
+window/size/resizable=false
+window/size/test_width=1920
+window/size/test_height=1080
+window/dpi/allow_hidpi=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+
+[input]
+
+ui_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
+ ]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
+ ]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
+ ]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
+ ]
+}
+ui_end={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777230,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_unbind={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777224,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":10,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_cancel_binding={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":11,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_reset_to_default={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":70,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Worlds"
+2d_physics/layer_3="PassThrough"
+2d_physics/layer_4="Enemies"
+2d_physics/layer_5="Npcs"
+2d_physics/layer_6="Object"
+2d_physics/layer_7="Hitbox"
+2d_physics/layer_8="DamageSource"
+2d_physics/layer_9="SavePoint"
+
+[locale]
+
+test="en"
+locale_filter=[ 0, [ "fr" ] ]
+translations=PackedStringArray( "res://i18n/audio.en.translation", "res://i18n/audio.fr.translation", "res://i18n/cfg.en.translation", "res://i18n/cfg.fr.translation", "res://i18n/commons.en.translation", "res://i18n/commons.fr.translation", "res://i18n/controls.en.translation", "res://i18n/controls.fr.translation", "res://i18n/display.en.translation", "res://i18n/display.fr.translation", "res://i18n/gamepad.en.translation", "res://i18n/gamepad.fr.translation", "res://i18n/mouse.en.translation", "res://i18n/mouse.fr.translation", "res://i18n/rebind.en.translation", "res://i18n/rebind.fr.translation", "res://i18n/input.en.translation", "res://i18n/input.fr.translation" )
+translation_remaps={
+}
+
+[rendering]
+
+2d/snapping/use_gpu_pixel_snap=true
+environment/default_environment="res://default_env.tres"
+quality/2d/use_pixel_snap=true

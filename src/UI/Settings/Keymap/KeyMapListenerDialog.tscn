@@ -1,0 +1,147 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/UI/Settings/Keymap/KeyMapListenerDialog.gd" type="Script" id=1]
+[ext_resource path="res://src/UI/Commons/Button/CancelButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UI/Commons/Button/ConfirmButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UI/Audio/ConnectAudio/UiConnectAudioToAboutToShow.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UI/Audio/ConnectAudio/UiConnectAudioToPopupHide.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/UI/Audio/Node3D/UiPopupClosedSfx.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/UI/Audio/Node3D/UiPopupOpenedSfx.tscn" type="PackedScene" id=7]
+
+[sub_resource type="InputEventAction" id=3]
+action = "ui_cancel"
+pressed = true
+
+[sub_resource type="Shortcut" id=2]
+shortcut = SubResource( 3 )
+
+[node name="KeyMapListenerDialog" type="Window"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.5
+offset_top = -59.0
+offset_right = 178.5
+offset_bottom = 59.0
+exclusive = true
+window_title = "Please Confirm..."
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UiPopupClosedSfx" parent="." instance=ExtResource( 6 )]
+
+[node name="UiConnectAudioToPopupHide" parent="UiPopupClosedSfx" instance=ExtResource( 5 )]
+
+[node name="UiPopupOpenedSfx" parent="." instance=ExtResource( 7 )]
+
+[node name="UiConnectAudioToAboutToShow" parent="UiPopupOpenedSfx" instance=ExtResource( 4 )]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="Tick" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/offset_right = 10
+custom_constants/offset_top = 10
+custom_constants/offset_left = 10
+custom_constants/offset_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 347.0
+offset_bottom = 108.0
+custom_constants/separation = 12
+alignment = 1
+
+[node name="Message" type="Label" parent="MarginContainer/VBoxContainer"]
+offset_right = 337.0
+offset_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "ui_bind_a_new_key"
+align = 1
+autowrap = true
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer"]
+visible = false
+offset_top = 29.0
+offset_right = 337.0
+offset_bottom = 39.0
+rect_min_size = Vector2( 0, 10 )
+max_value = 10.0
+step = 1.0
+rounded = true
+percent_visible = false
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/ProgressBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelBindingMessage" type="Label" parent="MarginContainer/VBoxContainer"]
+offset_top = 36.0
+offset_right = 337.0
+offset_bottom = 61.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "rebind.cancel_binding"
+align = 1
+autowrap = true
+
+[node name="UnbindMessage" type="Label" parent="MarginContainer/VBoxContainer"]
+offset_top = 73.0
+offset_right = 337.0
+offset_bottom = 98.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "rebind.hold_to_unbind"
+align = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+visible = false
+offset_top = 78.0
+offset_right = 337.0
+offset_bottom = 98.0
+alignment = 1
+
+[node name="CancelContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+offset_right = 166.0
+offset_bottom = 20.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Cancel" parent="MarginContainer/VBoxContainer/HBoxContainer/CancelContainer" instance=ExtResource( 2 )]
+offset_left = 47.0
+offset_right = 168.0
+mouse_default_cursor_shape = 0
+shortcut = SubResource( 2 )
+align = 1
+
+[node name="RebindContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+offset_left = 170.0
+offset_right = 337.0
+offset_bottom = 20.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Rebind" parent="MarginContainer/VBoxContainer/HBoxContainer/RebindContainer" instance=ExtResource( 3 )]
+offset_left = 19.0
+offset_right = 148.0
+mouse_default_cursor_shape = 0
+text = "rebind.rebind"
+align = 1

@@ -1,0 +1,430 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://src/UI/Settings/Gamepad/GamepadLayoutPreview.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_gamepad.png" type="Texture2D" id=2]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_RB.png" type="Texture2D" id=3]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_stick_left.png" type="Texture2D" id=4]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_select.png" type="Texture2D" id=5]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_dpad_left.png" type="Texture2D" id=6]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_LB.png" type="Texture2D" id=7]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_dpad_up.png" type="Texture2D" id=8]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_button_bottom.png" type="Texture2D" id=9]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_LT.png" type="Texture2D" id=10]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_start.png" type="Texture2D" id=11]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_dpad_down.png" type="Texture2D" id=12]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_button_top.png" type="Texture2D" id=13]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_stick_right.png" type="Texture2D" id=14]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_RT.png" type="Texture2D" id=15]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_dpad_right.png" type="Texture2D" id=16]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_button_left.png" type="Texture2D" id=17]
+[ext_resource path="res://assets/ui/gamepad/ui_gamepad_button_right.png" type="Texture2D" id=18]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/ButtonBottom.gd" type="Script" id=21]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/ButtonLeft.gd" type="Script" id=22]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/ButtonRight.gd" type="Script" id=23]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/ButtonTop.gd" type="Script" id=24]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/DPadDown.gd" type="Script" id=25]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/DPadLeft.gd" type="Script" id=26]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/DPadRight.gd" type="Script" id=27]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/DPadUp.gd" type="Script" id=28]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/LB.gd" type="Script" id=29]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/LT.gd" type="Script" id=30]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/RB.gd" type="Script" id=31]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/RT.gd" type="Script" id=32]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/Select.gd" type="Script" id=33]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/Start.gd" type="Script" id=34]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/StickLeft.gd" type="Script" id=35]
+[ext_resource path="res://src/UI/Settings/Gamepad/Data/StickRight.gd" type="Script" id=36]
+
+[node name="GamepadLayoutPreview" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -200.0
+offset_bottom = -170.0
+rect_min_size = Vector2( 280, 100 )
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gamepad" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonBottom" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 9 )
+script = ExtResource( 21 )
+
+[node name="Label" type="Label" parent="Panel/ButtonBottom"]
+offset_left = 154.0
+offset_top = 52.0
+offset_right = 194.0
+offset_bottom = 66.0
+text = "Bottom"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLeft" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 17 )
+script = ExtResource( 22 )
+
+[node name="Label" type="Label" parent="Panel/ButtonLeft"]
+offset_left = 154.0
+offset_top = 18.0
+offset_right = 194.0
+offset_bottom = 32.0
+text = "Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRight" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 18 )
+script = ExtResource( 23 )
+
+[node name="Label" type="Label" parent="Panel/ButtonRight"]
+offset_left = 154.0
+offset_top = 39.0
+offset_right = 194.0
+offset_bottom = 47.0
+text = "Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonTop" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 13 )
+script = ExtResource( 24 )
+
+[node name="Label" type="Label" parent="Panel/ButtonTop"]
+offset_left = 154.0
+offset_top = 28.0
+offset_right = 194.0
+offset_bottom = 36.0
+text = "Top"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DPadDown" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 12 )
+script = ExtResource( 25 )
+
+[node name="Label" type="Label" parent="Panel/DPadDown"]
+offset_left = -49.0
+offset_top = 69.0
+offset_right = -1.0
+offset_bottom = 77.0
+grow_horizontal = 0
+text = "DPadDown"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DPadLeft" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 6 )
+script = ExtResource( 26 )
+
+[node name="Label" type="Label" parent="Panel/DPadLeft"]
+offset_left = -49.0
+offset_top = 59.0
+offset_right = -1.0
+offset_bottom = 67.0
+grow_horizontal = 0
+text = "DPadLeft"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DPadRight" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 16 )
+script = ExtResource( 27 )
+
+[node name="Label" type="Label" parent="Panel/DPadRight"]
+offset_left = -53.0
+offset_top = 78.0
+offset_right = -1.0
+offset_bottom = 86.0
+grow_horizontal = 0
+text = "DPadRight"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DPadUp" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 8 )
+script = ExtResource( 28 )
+
+[node name="Label" type="Label" parent="Panel/DPadUp"]
+offset_left = -41.0
+offset_top = 49.0
+offset_right = -1.0
+offset_bottom = 57.0
+grow_horizontal = 0
+text = "DpadUp"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LB" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 7 )
+script = ExtResource( 29 )
+
+[node name="Label" type="Label" parent="Panel/LB"]
+offset_left = -42.0
+offset_top = 21.0
+offset_right = -2.0
+offset_bottom = 29.0
+grow_horizontal = 0
+text = "LB"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LT" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 10 )
+script = ExtResource( 30 )
+
+[node name="Label" type="Label" parent="Panel/LT"]
+offset_left = -41.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = 7.0
+grow_horizontal = 0
+text = "LT"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RB" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 3 )
+script = ExtResource( 31 )
+
+[node name="Label" type="Label" parent="Panel/RB"]
+offset_left = 154.0
+offset_top = 8.0
+offset_right = 194.0
+offset_bottom = 16.0
+text = "RB"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RT" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 15 )
+script = ExtResource( 32 )
+
+[node name="Label" type="Label" parent="Panel/RT"]
+offset_left = 154.0
+offset_top = -1.0
+offset_right = 194.0
+offset_bottom = 7.0
+text = "RT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 5 )
+script = ExtResource( 33 )
+
+[node name="Label" type="Label" parent="Panel/Select"]
+offset_left = 40.0
+offset_top = -4.0
+offset_right = 80.0
+offset_bottom = 4.0
+text = "Select"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 11 )
+script = ExtResource( 34 )
+
+[node name="Label" type="Label" parent="Panel/Start"]
+offset_left = 77.0
+offset_top = -4.0
+offset_right = 117.0
+offset_bottom = 4.0
+text = "Pause"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StickLeft" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 4 )
+script = ExtResource( 35 )
+
+[node name="Label" type="Label" parent="Panel/StickLeft"]
+offset_left = -41.0
+offset_top = 36.0
+offset_right = -1.0
+offset_bottom = 44.0
+grow_horizontal = 0
+text = "Stick"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StickRight" type="TextureRect" parent="Panel"]
+offset_left = 65.0
+offset_top = 8.0
+offset_right = 217.0
+offset_bottom = 97.0
+texture = ExtResource( 14 )
+script = ExtResource( 36 )
+
+[node name="Label" type="Label" parent="Panel/StickRight"]
+offset_left = 154.0
+offset_top = 65.0
+offset_right = 194.0
+offset_bottom = 73.0
+text = "Stick"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 125, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Block" type="Label" parent="VBoxContainer"]
+offset_right = 280.0
+offset_bottom = 8.0
+text = "Block"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Attack" type="Label" parent="VBoxContainer"]
+offset_top = 12.0
+offset_right = 280.0
+offset_bottom = 20.0
+text = "Attack"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Evade" type="Label" parent="VBoxContainer"]
+offset_top = 24.0
+offset_right = 280.0
+offset_bottom = 32.0
+text = "Evade"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jump" type="Label" parent="VBoxContainer"]
+offset_top = 36.0
+offset_right = 280.0
+offset_bottom = 44.0
+text = "Jump"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Run" type="Label" parent="VBoxContainer"]
+offset_top = 48.0
+offset_right = 280.0
+offset_bottom = 56.0
+text = "Run"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
